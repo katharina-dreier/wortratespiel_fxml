@@ -1,0 +1,82 @@
+/* Gesamter Hintergrund */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #fafbff, #eef1f7);
+}
+
+/* Karte in der Mitte */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 28;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 18, 0.12, 0, 6);
+}
+
+/* Texte */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937; /* dunkles Grau */
+}
+
+.subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #1f2937;
+	-fx-alignment: center;
+}
+
+.result {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #1f2937;
+    -fx-alignment: center;
+}
+
+/* Eingabe */
+.input {
+    -fx-font-size: 16px;
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 10;
+    -fx-background-color: #f3f4f6;
+    -fx-text-fill: #1f2937;
+    -fx-prompt-text-fill: #9ca3af;
+    -fx-border-color: transparent;
+    -fx-border-radius: 10;
+}
+.input:focused {
+    -fx-background-color: #eef2ff;
+    -fx-border-color: #6366f1; /* indigo */
+}
+
+/* Button */
+.primary {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-padding: 10 18 10 18;
+    -fx-background-radius: 12;
+    -fx-background-color: #6366f1; /* indigo */
+    -fx-text-fill: white;
+}
+.primary:hover {
+    -fx-background-color: #4f46e5;
+}
+.primary:pressed {
+    -fx-background-color: #4338ca;
+}
+.primary:disabled {
+    -fx-background-color: #9ca3af;
+}
+
+.secondary {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 12;
+    -fx-background-color: #e5e7eb; /* hellgrau */
+    -fx-text-fill: #111827;
+}
+.secondary:hover {
+    -fx-background-color: #d1d5db;
+}
+.secondary:pressed {
+    -fx-background-color: #c7ccd1;
+}
