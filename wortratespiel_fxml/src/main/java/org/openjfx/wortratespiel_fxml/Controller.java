@@ -60,6 +60,10 @@ public class Controller {
 	    lbl2.setText(spiel.bestimmeBisherErratenesWort());
 	    txt.setDisable(false);
 	    btn.setDisable(false);
+	    txt.setVisible(true);
+		btn.setVisible(true);
+		txt.setManaged(true);
+		btn.setManaged(true);
 	    txt.clear();
 	    txt.requestFocus();
 	    btnRestart.setVisible(false);
