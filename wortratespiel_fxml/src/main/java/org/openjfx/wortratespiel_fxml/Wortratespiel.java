@@ -5,7 +5,15 @@ import java.util.HashSet;
 
 public class Wortratespiel {
 	
-	private String [] wortliste = {"Haus", "Auto", "Schule", "Hund", "Katze", "Maus", "Buch", "Tisch", "Stuhl", "Fenster"};
+	private String [] wortliste = {"Haus", "Auto", "Schule", "Hund", "Katze", "Maus", "Buch", "Tisch", "Stuhl", "Fenster",
+			 "Garten", "Blume", "Baum", "Computer", "Lampe", "Apfel", "Banane", "Wolke", "Sonne", "Regen",
+			 "Vogel", "Fisch", "Berg", "Tal", "Straße", "Brücke", "Zug", "Bus", "Uhr", "Kuchen",
+			 "Glas", "Becher", "Tür", "Bett", "Decke", "Kissen", "Hemd", "Jacke", "Schuh", "Hose",
+			 "Freund", "Kind", "Mutter", "Vater", "Lehrer", "Arzt", "Feuer", "Wasser", "Wind", "Erde",
+			 "Brot", "Milch", "Käse", "Ei", "Butter", "Zucker", "Salz", "Pfanne", "Topf", "Löffel",
+			 "Fahrrad", "Ball", "Spiel", "Musik", "Tanz", "Film", "Bilder", "Traum", "Herz", "Licht",
+			 "Wald", "Meer", "Fluss", "Insel", "Boot", "Autohaus", "Blatt", "Schnee", "Eis", "Wiese",
+			 "Sommer", "Winter", "Frühling", "Herbst", "Abend", "Morgen", "Nacht", "Tag", "Woche", "Jahr"};
 	
 	private Random random = new Random();
 	
