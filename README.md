@@ -32,12 +32,14 @@ Zum **Bauen des Projekts** aus dem Quellcode wird benötigt:
 3. Doppelklicke **`Wortratespiel.exe`**.  
    → Das Spiel startet sofort 🎉
 
-👩‍💻 Autorin
+---
+
+## 👩‍💻 Autorin
 
 Katharina Dreier
 angehende Softwareentwicklerin
 
-📜 Lizenz
+## 📜 Lizenz
 
 Dieses Projekt wurde zu Lernzwecken erstellt.
 Alle Rechte vorbehalten © 2025 Katharina Dreier.
