@@ -1,7 +1,14 @@
 package org.openjfx.wortratespiel_fxml;
 import java.util.Random;
 import java.util.Set;
+
+import javafx.scene.image.Image;
+
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Objects;
+
 
 public class Wortratespiel {
 	
@@ -16,13 +23,16 @@ public class Wortratespiel {
 			 "Sommer", "Winter", "Frühling", "Herbst", "Abend", "Morgen", "Nacht", "Tag", "Woche", "Jahr"};
 	
 	private Random random = new Random();
-	
+	private List<String> bilder = new ArrayList<String>();
 	private String originalWort;
 	private Set<String> nichtErrateneBuchstaben;
 	private Set<String> gerateneBuchstaben;
 	private int anzahlVersuche;
-	private int fehlerZaehler;
-	private int maxFehler = 8;
+	public int fehlerZaehler;
+	private int maxFehler = 7;
+	private String bildpfad = "org/openjfx/wortratespiel_fxml/images/pinguin" + fehlerZaehler+1 + ".png";
+	
+
 	
 	public void starten() {
 		anzahlVersuche = 0;
@@ -33,7 +43,24 @@ public class Wortratespiel {
 		for (String zeichen : zeichenInWort) {
 			nichtErrateneBuchstaben.add(zeichen);
 		}
+		fehlerZaehler = 0;}
+		
+	public String getBildpfad() {
+		return bildpfad;
 	}
+	
+	public Image aktualisiereBild() {
+        int bildzahl = fehlerZaehler+1;
+		String bildPfad = String.format(
+            "/org/openjfx/wortratespiel_fxml/images/pinguin" + bildzahl + ".png");
+
+        Image bild = new Image(Objects.requireNonNull(
+            getClass().getResourceAsStream(bildPfad),
+            "Bild nicht gefunden: " + bildPfad
+        ));
+
+        return bild;
+    }
 	
 	public String bestimmeBisherErratenesWort() {
 		String bisherErratenesWort = new String(originalWort);
