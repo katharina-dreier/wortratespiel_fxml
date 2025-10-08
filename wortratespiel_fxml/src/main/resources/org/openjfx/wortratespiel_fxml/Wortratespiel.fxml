@@ -8,29 +8,30 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="480" prefWidth="600" styleClass="root" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.wortratespiel_fxml.Controller">
+<StackPane prefHeight="600" prefWidth="600" styleClass="root" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.wortratespiel_fxml.Controller">
 
     <!-- Zentrale Karte -->
     <VBox alignment="CENTER" maxWidth="520" prefWidth="520.0" spacing="18.0" styleClass="card">
         <children>
 
-            <!-- Titel (statisch, kein fx:id nötig) -->
+            <!-- Titel -->
             <Label styleClass="title" text="Wortratespiel" />
 
-            <!-- Untertitel/Anweisung (an dein lbl1 gebunden) -->
+            <!-- Untertitel/Anweisung  -->
             <Label fx:id="lbl1" maxWidth="440" styleClass="subtitle" text="Bitte gib einen Buchstaben ein:" wrapText="true" />
 
             <Separator />
 
-            <!-- Eingabe + Button (vertikal, schön luftig) -->
-            <TextField fx:id="txt" maxWidth="180" promptText="Dein Buchstabe" styleClass="input" />
+            <!-- Eingabe + Button  -->
+            <TextField fx:id="txt" maxWidth="180" promptText="Dein Tipp" styleClass="input" />
             <Button fx:id="btn" defaultButton="true" onAction="#handleButtonActionOK" styleClass="primary" text="OK" />
-            <Button fx:id="btnRestart" text="Neu starten" onAction="#onNeuStarten" styleClass="secondary"/>
+            <Button fx:id="btnRestart" onAction="#onNeuStarten" styleClass="secondary" text="Neu starten" />
 
             <Separator />
 
             <!-- Ergebnisanzeige -->
             <Label fx:id="lbl2" maxWidth="440" styleClass="result" text="********" wrapText="true" />
+         <Label fx:id="lbl3" maxWidth="440" styleClass="result" text="Diese Buchstaben hast du schon versucht:" wrapText="true" />
 
         </children>
         <padding>

@@ -19,12 +19,16 @@ public class Wortratespiel {
 	
 	private String originalWort;
 	private Set<String> nichtErrateneBuchstaben;
+	private Set<String> gerateneBuchstaben;
 	private int anzahlVersuche;
+	private int fehlerZaehler;
+	private int maxFehler = 8;
 	
 	public void starten() {
 		anzahlVersuche = 0;
 		originalWort = wortliste[random.nextInt(wortliste.length)];
 		nichtErrateneBuchstaben = new HashSet<String>();
+		gerateneBuchstaben = new HashSet<String>();
 		String[] zeichenInWort = originalWort.split("");
 		for (String zeichen : zeichenInWort) {
 			nichtErrateneBuchstaben.add(zeichen);
@@ -47,17 +51,48 @@ public class Wortratespiel {
 			eingabe = eingabe.toLowerCase();
 			nichtErrateneBuchstaben.remove(eingabe);
 			anzahlVersuche++;
+			gerateneBuchstaben.add(eingabe);
 		}
+		else {if (eingabe.equalsIgnoreCase(originalWort)) {
+            nichtErrateneBuchstaben.clear();
+            beenden();
+        	} 
+		else {anzahlVersuche++;}
+			}
+        
+			if (!originalWort.toLowerCase().contains(eingabe.toLowerCase())) {
+				fehlerZaehler++;
+				if (fehlerZaehler >= maxFehler) {
+					nichtErrateneBuchstaben.clear();
+					verloren();
+				}
+			}
+	}
+
+	public String getGerateneBuchstaben() {
+		if (gerateneBuchstaben.isEmpty()) {
+			return "noch keine";
+		}
+		else return String.join(", ", gerateneBuchstaben);
 	}
 	
 	public boolean istSpielZuEnde() {
 		return nichtErrateneBuchstaben.isEmpty();
 	}
 	
+	public boolean hatSpielerVerloren() {
+		return fehlerZaehler >= maxFehler;
+	}
+	
 	public String beenden() {
 		String ende = "Du hast " + anzahlVersuche + " Versuche gebraucht.";
 		return ende;
 		
+	}
+	
+	public String verloren() {
+		String verloren = "Du hast leider verloren! Das Wort war: " + originalWort + ".";
+		return verloren;
 	}
 	
 }
