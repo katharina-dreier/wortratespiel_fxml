@@ -27,7 +27,7 @@ Zum **Bauen des Projekts** aus dem Quellcode wird benötigt:
 
 ## ▶️ Ausführen unter Windows
 
-1. Lade das Archiv `Wortratespiel.zip` herunter.  
+1. Lade das Archiv `Wortratespiel.zip` herunter: [Jetzt herunterladen](https://drive.google.com/drive/folders/1dPHqYkAceoGsZVahft6P8Z3xlp_xww4W?usp=sharing)  
 2. Entpacke es an einem beliebigen Ort.  
 3. Doppelklicke **`Wortratespiel.exe`**.  
    → Das Spiel startet sofort 🎉
