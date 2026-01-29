@@ -9,14 +9,14 @@ class Test_Wortratespiel {
 	@Test
 	void testHatSpielerVerloren_Bei2Fehler() {
 		Wortratespiel spiel = new Wortratespiel();
-		spiel.fehlerZaehler = 2;
+		spiel.setFehlerZaehler(2);
 		assertFalse(spiel.hatSpielerVerloren());
 	}
 	
 	@Test
 	void testHatSpielerVerloren_Bei7Fehler() {
 		Wortratespiel spiel = new Wortratespiel();
-		spiel.fehlerZaehler = 7;
+		spiel.setFehlerZaehler(7);
 		assertTrue(spiel.hatSpielerVerloren());
 	}
 

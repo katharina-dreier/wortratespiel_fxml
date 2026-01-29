@@ -1,7 +1,5 @@
 package org.openjfx.wortratespiel_fxml;
 
-import java.util.Objects;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -30,11 +28,14 @@ public class Controller {
 	private void initialize() {
 
 		ttl.setText("🐧 Willkommen zum Wortratespiel!");
-		lbl1.setText("Finde das geheime Wort, bevor das Eis unter dem Pinguin vollständig schmilzt!\r\n"
-				+ "Du kannst einzelne Buchstaben raten oder das ganze Wort auf einmal versuchen.\r\n"
-				+ "Jeder falsche Buchstabe bringt den kleinen Pinguin seinem kalten Bad ein Stück näher – also wähle weise!\r\n"
-				+ "\r\n"
-				+ "Viel Spaß beim Knobeln und viel Glück beim Retten des Pinguins!");
+		String textInfo ="""
+				
+				Finde das geheime Wort, bevor das Eis unter dem Pinguin vollständig schmilzt!
+				Du kannst einzelne Buchstaben raten oder das ganze Wort auf einmal versuchen.
+				Jeder falsche Buchstabe bringt den kleinen Pinguin seinem kalten Bad ein Stück näher – also wähle weise!
+				
+				Viel Spaß beim Knobeln und viel Glück beim Retten des Pinguins!""";
+		lbl1.setText(textInfo);
 	}
 	
 	@FXML
@@ -79,7 +80,7 @@ public class Controller {
 		lbl3.setVisible(true);
 		lbl3.setManaged(true);
 		lbl3.setText("Diese Buchstaben hast du schon versucht: \n" + spiel.getGerateneBuchstaben() + "\nFehler: "
-				+ spiel.fehlerZaehler);
+				+ spiel.getFehlerZaehler());
 		txt.clear();
 		txt.requestFocus();
 		
